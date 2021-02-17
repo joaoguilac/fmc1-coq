@@ -148,9 +148,12 @@ Qed.
 
 
 (*6. As leis de De Morgan*)
-Theorem DeMorgan_1 : forall (p q : Prop), ~(p \/ q) -> (~p /\ ~q).
+Theorem DeMorgan_1 : Lem -> forall (p q : Prop), ~(p \/ q) -> (~p /\ ~q).
 Proof.
-  intros p q H.
+  intros Hlem p q H.
+  unfold not in H.
+  destruct (Hlem p) as [Hp | Hnp].
+  
 Qed. 
 
 As leis de De Morgan:
