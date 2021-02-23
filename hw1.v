@@ -152,10 +152,6 @@ Proof.
   intros Hlem p q H.
   unfold not in H.
   destruct (Hlem p) as [Hp | Hnp].
-<<<<<<< HEAD
-=======
-  
->>>>>>> 37c389d355ddceddf3d9fe1177fb9ea5d2b06ca3
 Qed. 
 
 As leis de De Morgan:
