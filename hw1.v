@@ -146,11 +146,16 @@ Proof.
       apply H in H_dis as Hbot. contradiction.
 Qed.
 
-
 (*6. As leis de De Morgan*)
-Theorem DeMorgan_1 : forall (p q : Prop), ~(p \/ q) -> (~p /\ ~q).
+Theorem DeMorgan_1 : Lem -> forall (p q : Prop), ~(p \/ q) -> (~p /\ ~q).
 Proof.
-  intros p q H.
+  intros Hlem p q H.
+  unfold not in H.
+  destruct (Hlem p) as [Hp | Hnp].
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 37c389d355ddceddf3d9fe1177fb9ea5d2b06ca3
 Qed. 
 
 As leis de De Morgan:
